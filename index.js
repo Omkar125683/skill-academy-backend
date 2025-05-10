@@ -58,13 +58,13 @@ app.use("/api/v1/contact", require("./routes/ContactUs"));
 // });
 
 
-const _dirname = path.resolve();
+// const _dirname = path.resolve();
 
-app.use(express.static(path.join(__dirname,"/dist")))
+// app.use(express.static(path.join(__dirname,"/dist")))
 
-app.get("*",(req,res)=>{
-  res.sendFile(path.resolve(_dirname,"dist","index.html"));
-})
+// app.get("*",(req,res)=>{
+//   res.sendFile(path.resolve(_dirname,"dist","index.html"));
+// })
 
 
 app.listen(PORT, () => {
