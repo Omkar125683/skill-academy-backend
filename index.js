@@ -51,11 +51,11 @@ app.use("/api/v1/course", CourseRoutes);
 
 app.use("/api/v1/contact", require("./routes/ContactUs"));
 
-// app.get("/", (req, res) => {
-//   res.status(200).json({
-//     message: "Welcome to the API",
-//   });
-// });
+app.all("/", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to the API",
+  });
+});
 
 
 // const _dirname = path.resolve();
